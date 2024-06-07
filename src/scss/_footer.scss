@@ -1,4 +1,133 @@
 // Footer
-footer {
-    display: block;
+.footer {
+  padding: 40px 0;
+  background-color: var(--gray);
+
+  @media (max-width: $breakpoint768) {
+    padding: 30px 0;
+  }
+
+  // .footer__inner
+
+  &__inner {}
+
+  // .footer__nav
+
+  &__nav {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255, .1);
+  }
+
+  // .footer__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 90px;
+
+    @media (max-width: $breakpoint768) {
+      column-gap: 28px;
+    }
+  }
+
+  // .footer__item
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      padding-right: 90px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 1px;
+        height: 15px;
+        background-color: var(--white);
+        opacity: 0.15;
+      }
+
+      @media (max-width: $breakpoint768) {
+        padding-right: 28px;
+      }
+    }
+  }
+
+  // .footer__link
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white);
+    transition: 0.2s linear;
+    opacity: 0.6;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background-color: var(--white);
+      height: 2px;
+      -webkit-transition-property: right;
+      transition-property: right;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        opacity: 1;
+
+        &::before {
+          right: 0;
+        }
+      }
+    }
+
+  }
+
+  // .footer__copy
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  // .footer__copy-head
+
+  &__copy-head {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--white);
+    opacity: 0.5;
+  }
+
+  // .footer__copy-main
+
+  &__copy-main {
+    font-size: 12px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--white);
+    opacity: 0.3;
+  }
 }

@@ -51,3 +51,26 @@ function fixedNav() {
   }
 }
 window.addEventListener('scroll', fixedNav)
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.contacts__form');
+
+  if (!container) {
+    return null
+  }
+
+  const radioButtons = document.querySelectorAll(".contacts__form-checkbox");
+  const inputFields = document.querySelectorAll(".contacts__form-input--checkbox");
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener("change", () => {
+      // Remove active class from all input fields
+      inputFields.forEach(input => input.classList.remove("active"));
+
+      // Add active class to the corresponding input field
+      const inputId = radio.id + "-input";
+      document.getElementById(inputId).classList.add("active");
+    });
+  });
+});
