@@ -4,6 +4,64 @@
   background-color: var(--gray);
 }
 
+.main__body.locked {
+  .header--lite-bg {
+
+    .logo--white .logo__img {
+      display: none;
+    }
+
+    .logo--white .logo__img--white {
+      display: flex;
+    }
+  }
+}
+
+.header--lite-bg {
+  background-color: #f5f5f5;
+
+  .menu__item-link {
+    color: var(--gray);
+
+
+    &::before {
+      background-color: var(--black);
+    }
+
+    &.btn-outline {
+      border-color: var(--green);
+      color: var(--green);
+
+      @media (hover:hover) {
+        &:hover {
+          background-color: var(--green);
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .logo--white .logo__img {
+    display: flex;
+  }
+
+  .logo--white .logo__img--white {
+    display: none;
+  }
+
+  @media screen and (max-width: $burgerBreakpoint) {
+    .menu__item-link {
+      color: var(--white);
+    }
+
+    .burger:after,
+    .burger:before,
+    .burger span {
+      background-color: var(--green);
+    }
+  }
+}
+
 // Navbar
 .nav {}
 

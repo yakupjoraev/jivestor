@@ -7,10 +7,11 @@
 
 // Sections or Pages SCSS-files imports
 @import './header';
-// @import './calculation';
-// @import './launch';
-// @import './similar-business';
-// @import './faq';
+@import './calculation';
+@import './launch';
+@import './similar-business';
+@import './accordion';
+@import './faq';
 @import './ready-move';
 @import './contacts';
 @import './blog';
