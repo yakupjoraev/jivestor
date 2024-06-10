@@ -1,0 +1,40 @@
+.overview {
+  background-color: var(--gray);
+
+  // .overview__inner
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  // .overview__main
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 45px;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 30px;
+    }
+
+  }
+
+  // .overview__pic
+
+  &__pic {
+    max-width: 100%;
+  }
+
+  // .overview__descr
+
+  &__descr {
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--white);
+    opacity: 0.6;
+  }
+}

@@ -202,6 +202,10 @@ body.locked {
   color: var(--black);
 }
 
+.section-title--white {
+  color: var(--white);
+}
+
 .section-title--h1 {
   max-width: 1050px;
   margin: 0 auto;
@@ -228,6 +232,19 @@ body.locked {
   text-align: center;
   color: var(--gray);
   opacity: 0.6;
+}
+
+.section-text--white {
+  color: var(--white);
+}
+
+.section-subtitle--green {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--green);
 }
 
 .btn {
@@ -1487,6 +1504,41 @@ body.locked {
   color: var(--gray);
 }
 
+.overview {
+  background-color: var(--gray);
+}
+
+.overview__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.overview__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 45px;
+}
+
+.overview__pic {
+  max-width: 100%;
+}
+
+.overview__descr {
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--white);
+  opacity: 0.6;
+}
+
 .footer {
   padding: 40px 0;
   background-color: var(--gray);
@@ -1839,6 +1891,10 @@ body.locked {
 
   .blog-detail__aside-name {
     font-size: 16px;
+  }
+
+  .overview__main {
+    row-gap: 30px;
   }
 }
 

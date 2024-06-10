@@ -34,6 +34,10 @@
   text-align: center;
   color: var(--black);
 
+  &--white {
+    color: var(--white);
+  }
+
   @media (max-width: $breakpoint768) {
     font-size: 32px;
   }
@@ -73,6 +77,20 @@
   text-align: center;
   color: var(--gray);
   opacity: 0.6;
+
+  &--white {
+    color: var(--white);
+  }
+
+}
+
+.section-subtitle--green {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--green);
 }
 
 .btn {
