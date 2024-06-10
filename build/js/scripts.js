@@ -76,6 +76,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function platformSlider() {
+  const container = document.querySelector('.slider');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper("#platform-features", {
+    navigation: {
+      nextEl: "#platform-feature-next",
+      prevEl: "#platform-feature-prev",
+    },
+
+    pagination: {
+      el: "#platform-features-pagination",
+      clickable: true,
+    },
+  });
+}
+platformSlider();
+
+function userSlider() {
+  const container = document.querySelector('.slider');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper("#user-features", {
+    navigation: {
+      nextEl: "#user-features-next",
+      prevEl: "#user-features-prev",
+    },
+
+    pagination: {
+      el: "#user-features-pagination",
+      clickable: true,
+    },
+  });
+}
+userSlider();
 
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');

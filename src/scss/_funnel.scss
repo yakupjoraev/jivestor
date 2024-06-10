@@ -1,0 +1,143 @@
+.funnel {
+
+  // .funnel__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    align-items: center;
+
+    .section-head {
+      margin-bottom: 0;
+
+      img {
+        vertical-align: middle;
+
+        @media (max-width: $breakpoint768) {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 30px;
+    }
+
+  }
+
+  // .funnel__illustration
+
+  &__illustration {
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .funnel__illustration-mobile
+
+  &__illustration-mobile {
+    display: none;
+
+    @media (max-width: $breakpoint768) {
+      display: flex;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // .funnel__lines
+
+  &__lines {
+
+
+    @media (max-width: $breakpoint1450) {
+      width: 80%;
+    }
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+
+  }
+
+  // .funnel__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+  }
+
+  // .funnel__item
+
+  &__item {
+    display: grid;
+    row-gap: 10px;
+    border: 1px solid rgba(49, 52, 54, 0.1);
+    border-radius: 5px;
+    padding: 30px;
+
+
+    @media (max-width: $breakpoint1450) {
+      padding: 24px;
+    }
+
+  }
+
+  // .funnel__item-head
+
+  &__item-head {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  // .funnel__item-icon
+
+  &__item-icon {
+    min-width: 60px;
+
+    @media (max-width: $breakpoint1450) {
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+    }
+
+  }
+
+  // .funnel__item-label
+
+  &__item-label {
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 24px;
+    color: var(--black);
+
+
+    @media (max-width: $breakpoint1450) {
+      font-size: 20px;
+    }
+
+  }
+
+  // .funnel__item-content
+
+  &__item-content {}
+
+  // .funnel__item-text
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--gray);
+    opacity: 0.9;
+  }
+}
