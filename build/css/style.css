@@ -1513,6 +1513,15 @@ body.locked {
   margin: 0 auto;
 }
 
+.overview__inner .section-subtitle--green {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.overview__inner .section-text {
+  max-width: 840px;
+}
+
 .overview__main {
   display: -webkit-box;
   display: -ms-flexbox;

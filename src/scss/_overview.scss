@@ -6,6 +6,15 @@
   &__inner {
     max-width: 900px;
     margin: 0 auto;
+
+    .section-subtitle--green {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-text {
+      max-width: 840px;
+    }
   }
 
   // .overview__main
