@@ -216,12 +216,20 @@ body.locked {
   color: var(--black);
 }
 
+.section-title--h1--white {
+  color: var(--white);
+}
+
 .section-title__lite {
   font-weight: 300;
   font-size: 48px;
   text-align: center;
   line-height: 120%;
   color: var(--black);
+}
+
+.section-title__lite--white {
+  color: var(--white);
 }
 
 .section-text {
@@ -1548,6 +1556,53 @@ body.locked {
   opacity: 0.6;
 }
 
+.main-hero {
+  background-color: var(--gray);
+}
+
+.main-hero__inner .section-head {
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.main-hero__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 30px;
+}
+
+.main-hero__pic {
+  max-width: 100%;
+}
+
+.main-hero__descr {
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--white);
+}
+
+.main-hero__btn {
+  background-color: #ffc837;
+  color: var(--gray);
+}
+
+.main-hero__btn img {
+  -webkit-filter: brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(491%) hue-rotate(90deg) brightness(98%) contrast(95%);
+          filter: brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(491%) hue-rotate(90deg) brightness(98%) contrast(95%);
+}
+
 .footer {
   padding: 40px 0;
   background-color: var(--gray);
@@ -1905,6 +1960,10 @@ body.locked {
   .overview__main {
     row-gap: 30px;
   }
+
+  .main-hero__inner .section-head {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2212,6 +2271,11 @@ body.locked {
     position: static;
   }
 
+  .main-hero__btn {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .footer {
     padding: 30px 0;
   }
@@ -2310,6 +2374,15 @@ body.locked {
     -webkit-transform: translateX(3px);
         -ms-transform: translateX(3px);
             transform: translateX(3px);
+  }
+
+  .main-hero__btn:hover {
+    color: var(--white);
+  }
+
+  .main-hero__btn:hover img {
+    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(2%) hue-rotate(143deg) brightness(105%) contrast(100%);
+            filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(2%) hue-rotate(143deg) brightness(105%) contrast(100%);
   }
 
   .footer__link:hover {
