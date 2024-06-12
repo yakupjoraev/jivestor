@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 50%;"></div>
+              </div>
+
+              <h1 class="send__title">Please, help us better understand the required hardware resources</h1>
+            </div>
+
+            <div class="send__content">
+              <ul class="send__rows send-greeds send-greeds-2">
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">How many trading servers do you have?</label>
+                  <input class="send__row-input" type="text" placeholder="Number of servers">
+                </li>
+
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">How many trading accounts do you plan to host?</label>
+                  <input class="send__row-input error" type="text" placeholder="Number of  trading accounts">
+                </li>
+              </ul>
+            </div>
+
+            <div class="send__footer">
+              <button type="submit" class="send__btn-outline">Back</button>
+              <button type="submit" class="send__btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

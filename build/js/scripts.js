@@ -2,41 +2,48 @@
 // Custom scripts
 // Мобильное меню бургер
 function burgerMenu() {
-  const burger = document.querySelector('.burger')
-  const menu = document.querySelector('.menu')
-  const body = document.querySelector('body')
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const body = document.querySelector('body');
+
   burger.addEventListener('click', () => {
     if (!menu.classList.contains('active')) {
-      menu.classList.add('active')
-      burger.classList.add('active-burger')
-      body.classList.add('locked')
+      menu.classList.add('active');
+      burger.classList.add('active-burger');
+      body.classList.add('locked');
     } else {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
+      menu.classList.remove('active');
+      burger.classList.remove('active-burger');
+      body.classList.remove('locked');
     }
-  })
-  //снять классы при клике на элементы меню
-  const menuItems = document.querySelectorAll('.menu__item')
-
-  menuItems.forEach(item => {
-    item.addEventListener('click', function () {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
-    })
   });
 
-  // Вот тут мы ставим брейкпоинт навбара
+  // Снять классы при клике на элементы меню, кроме элементов с классом dropdown
+  const menuItems = document.querySelectorAll('.menu__item');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', function (event) {
+      // Проверяем, имеет ли кликнутый элемент или его родитель класс dropdown
+      if (!item.classList.contains('dropdown')) {
+        menu.classList.remove('active');
+        burger.classList.remove('active-burger');
+        body.classList.remove('locked');
+      }
+    });
+  });
+
+  // Снять классы при изменении размера окна
   window.addEventListener('resize', () => {
     if (window.innerWidth > 991.98) {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      body.classList.remove('locked')
+      menu.classList.remove('active');
+      burger.classList.remove('active-burger');
+      body.classList.remove('locked');
     }
-  })
+  });
 }
-burgerMenu()
+
+burgerMenu();
+
 
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
@@ -53,9 +60,65 @@ function fixedNav() {
 }
 window.addEventListener('scroll', fixedNav)
 
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.dropdown');
+
+  if (!container) {
+    return null
+  }
+
+  const dropdowns = document.querySelectorAll(".menu__item.dropdown");
+
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector(".menu__item-link");
+
+    // Обработчик для клика на ссылку
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Проверяем, есть ли у элемента класс active
+      if (dropdown.classList.contains("active")) {
+        // Если есть, удаляем его
+        dropdown.classList.remove("active");
+      } else {
+        // Удаляем класс active у всех dropdown элементов
+        dropdowns.forEach(item => item.classList.remove("active"));
+        // Добавляем класс active к текущему элементу
+        dropdown.classList.add("active");
+      }
+    });
+
+    // Обработчик для кликов на ссылки внутри выпадающего меню
+    const sublinks = dropdown.querySelectorAll(".menu__sublink");
+    sublinks.forEach(sublink => {
+      sublink.addEventListener("click", function () {
+        dropdown.classList.remove("active");
+      });
+    });
+  });
+
+  // Обработчик для клика вне выпадающего меню
+  document.addEventListener("click", function (event) {
+    let isClickInside = false;
+    dropdowns.forEach(dropdown => {
+      if (dropdown.contains(event.target)) {
+        isClickInside = true;
+      }
+    });
+
+    if (!isClickInside) {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove("active");
+      });
+    }
+  });
+});
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector('.contacts__form');
+  const container = document.querySelector('.contacts__form, .send');
 
   if (!container) {
     return null
@@ -84,6 +147,7 @@ function platformSlider() {
   }
 
   const swiper = new Swiper("#platform-features", {
+    autoHeight: true,
     navigation: {
       nextEl: "#platform-feature-next",
       prevEl: "#platform-feature-prev",
@@ -105,6 +169,7 @@ function userSlider() {
   }
 
   const swiper = new Swiper("#user-features", {
+    autoHeight: true,
     navigation: {
       nextEl: "#user-features-next",
       prevEl: "#user-features-prev",
@@ -117,6 +182,86 @@ function userSlider() {
   });
 }
 userSlider();
+
+
+function range() {
+  const container = document.querySelector('.range');
+
+  if (!container) {
+    return null
+  }
+
+  const sliderEl4 = document.querySelector("#range4");
+  const sliderValue4 = document.querySelector(".value4");
+  const sliderticks = document.querySelectorAll(".slidertick");
+
+  let previousValue = sliderEl4.value;
+
+  sliderEl4.addEventListener("input", (event) => {
+    const tempSliderValue = event.target.value;
+    sliderValue4.textContent = tempSliderValue;
+
+    const progress = (tempSliderValue / sliderEl4.max) * 100;
+    sliderEl4.style.background = `linear-gradient(to right, #0fab64 ${progress}%,#ccc ${progress}%)`;
+
+    // Проверка направления движения ползунка
+    if (tempSliderValue > previousValue) {
+      // Если движется вправо, добавляем класс active
+      if (sliderticks[tempSliderValue]) {
+        sliderticks[tempSliderValue].classList.add("active");
+      }
+    } else {
+      // Если движется влево, удаляем классы active
+      sliderticks.forEach((tick, index) => {
+        if (index > tempSliderValue) {
+          tick.classList.remove("active");
+        }
+      });
+    }
+
+    previousValue = tempSliderValue;
+  });
+
+
+}
+
+range();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.tabs');
+
+  if (!container) {
+    return null
+  }
+
+  let tabs = document.querySelectorAll('.tabs');
+
+  tabs.forEach(tab => {
+    const tabButtons = tab.querySelectorAll(".tabs__btn");
+    const tabContents = tab.querySelectorAll(".tabs__content");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const target = this.getAttribute("data-tab-btn");
+
+        // Удаляем класс active у всех кнопок
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+
+        // Добавляем класс active к нажатой кнопке
+        this.classList.add("active");
+
+        // Удаляем класс active у всего контента
+        tabContents.forEach(content => content.classList.remove("active"));
+
+        // Добавляем класс active к соответствующему контенту
+        tab.querySelector(`.tabs__content[data-tab-content="${target}"]`).classList.add("active");
+      });
+    });
+  });
+
+});
+
 
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');

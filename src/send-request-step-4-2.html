@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 50%;"></div>
+              </div>
+
+              <h1 class="send__title">What is your approximate monthly marketing budget?</h1>
+            </div>
+
+            <div class="send__content">
+              <div class="range__container">
+                <div class="range">
+                  <div class="range-slider">
+                    <input type="range" min="0" max="6" value="0" class="range-input" id="range4" step="1" />
+                    <div class="sliderticks">
+                      <div class="slidertick active">
+                        <p class="slidertick__usd">0 USD</p>
+                        <p class="slidertick__budget">no budget</p>
+                      </div>
+
+                      <div class="slidertick">
+                        <p class="slidertick__usd">500 USD</p>
+                        <p class="slidertick__budget">per month</p>
+                      </div>
+
+                      <div class="slidertick">
+                        <p class="slidertick__usd">1,000 USD</p>
+                        <p class="slidertick__budget">per month</p>
+                      </div>
+
+                      <div class="slidertick">
+                        <p class="slidertick__usd">2,500 USD</p>
+                        <p class="slidertick__budget">per month</p>
+                      </div>
+
+                      <div class="slidertick">
+                        <p class="slidertick__usd">5,000 USD</p>
+                        <p class="slidertick__budget">per month</p>
+                      </div>
+
+                      <div class="slidertick">
+                        <p class="slidertick__usd">10,000+ USD</p>
+                        <p class="slidertick__budget">per month</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="value4" style="display: none;">0</div>
+                </div>
+              </div>
+
+
+              <div class="send__footer">
+                <button type="submit" class="send__btn-outline">Back</button>
+                <button type="submit" class="send__btn">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

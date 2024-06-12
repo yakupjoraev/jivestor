@@ -26,18 +26,33 @@
         </div>
 
         <ul class="menu">
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>White Label</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>For Entrepreneurs</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Demo</a></li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__item-link" onclick="event.preventDefault()">
+              White Label
+
+              <img src="./img/icons/CaretDown.svg" alt="arrow icon">
+            </a>
+
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Trade Copier Web Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Performance Monitoring Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">White Label</a> </li>
+            </ul>
+          </li>
+
+          <li class="menu__item"><a href="#" class="menu__item-link">For Entrepreneurs</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link">Demo</a></li>
 
           <li class="menu__item">
-            <a href="#" class="menu__item-link btn" data-scroll>
+            <a href="#" class="menu__item-link btn">
               Pricing request
               <img class="menu__item-icon" width="16" height="16" src="./img/icons/white-arrow-right.svg"
                 alt="arrow icon">
             </a>
           </li>
-          <li class="menu__item"><a href="#" class="menu__item-link btn-outline" data-scroll>Contact Us</a></li>
+
+          <li class="menu__item"><a href="#" class="menu__item-link btn-outline">Contact Us</a></li>
+
         </ul>
         <div class="burger">
           <span></span>
@@ -285,6 +300,88 @@
 
   </div>
 </section>
+      <section class="type section">
+  <div class="container">
+    <div class="type__inner">
+      <div class="section-head">
+        <h3 class="section-title">
+          Type of fees
+
+          <img width="60" height="40" src="./img/funnel/funnel-arrow.svg" alt="arrow icon">
+        </h3>
+
+        <p class="section-text">
+          You can choose how to strategy followers and compensate strategy providers. <br />
+          We offer all possible options.
+        </p>
+      </div>
+
+      <div class="type__main">
+        <div class="type__tabs tabs">
+          <div class="tabs__btns">
+            <button type="button" class="tabs__btn active" data-tab-btn="Volume based fees">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>Volume based fees</span>
+            </button>
+
+            <button type="button" class="tabs__btn" data-tab-btn="Management fees">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>Management fees</span>
+            </button>
+
+            <button type="button" class="tabs__btn" data-tab-btn="Performance fees">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>Performance fees</span>
+            </button>
+
+            <button type="button" class="tabs__btn" data-tab-btn="Platform fees">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>Platform fees</span>
+            </button>
+          </div>
+
+          <div class="tabs__contents">
+            <div class="tabs__content active" data-tab-content="Volume based fees">
+              <p class="tabs__text">
+                A management fee is free that an investor pays to a money manager based on the capital that is allocated
+                to a particular strategy. The fee is a percentage of assets under management or a sum of money per
+                month. It is paid at the end of each trading interval (monthly).
+              </p>
+              <p class="tabs__accent-text">Contact us for a more detailed description of how this works. 1</p>
+            </div>
+
+            <div class="tabs__content" data-tab-content="Management fees">
+              <p class="tabs__text">
+                A management fee is free that an investor pays to a money manager based on the capital that is allocated
+                to a particular strategy. The fee is a percentage of assets under management or a sum of money per
+                month. It is paid at the end of each trading interval (monthly).
+              </p>
+              <p class="tabs__accent-text">Contact us for a more detailed description of how this works. 2</p>
+            </div>
+
+            <div class="tabs__content" data-tab-content="Performance fees">
+              <p class="tabs__text">
+                A management fee is free that an investor pays to a money manager based on the capital that is allocated
+                to a particular strategy. The fee is a percentage of assets under management or a sum of money per
+                month. It is paid at the end of each trading interval (monthly).
+              </p>
+              <p class="tabs__accent-text">Contact us for a more detailed description of how this works. 3</p>
+            </div>
+
+            <div class="tabs__content" data-tab-content="Platform fees">
+              <p class="tabs__text">
+                A management fee is free that an investor pays to a money manager based on the capital that is allocated
+                to a particular strategy. The fee is a percentage of assets under management or a sum of money per
+                month. It is paid at the end of each trading interval (monthly).
+              </p>
+              <p class="tabs__accent-text">Contact us for a more detailed description of how this works. 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <section class="slider section">
   <div class="container">
     <div class="slider__slider-container">
@@ -499,6 +596,61 @@
       </div>
     </div>
 
+  </div>
+</section>
+      <section class="type section">
+  <div class="container">
+    <div class="type__inner">
+      <div class="section-head">
+        <h3 class="section-title">
+          Type of fees
+
+          <img width="60" height="40" src="./img/funnel/funnel-arrow.svg" alt="arrow icon">
+        </h3>
+
+        <p class="section-text">
+          You can choose how to strategy followers and compensate strategy providers. <br />
+          We offer all possible options.
+        </p>
+      </div>
+
+      <div class="type__main">
+        <div class="type__tabs tabs">
+          <div class="tabs__btns">
+            <button type="button" class="tabs__btn active" data-tab-btn="White Label">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>White Label</span>
+            </button>
+
+            <button type="button" class="tabs__btn" data-tab-btn="Main Label">
+              <img class="tabs__btn-icon" src="./img/icons/green-arrow-right.svg" alt="arrow">
+              <span>Main Label</span>
+            </button>
+          </div>
+
+          <div class="tabs__contents">
+            <div class="tabs__content active" data-tab-content="White Label">
+              <p class="tabs__text">
+                The solution is suitable for brokers using their own trading servers or working under the white-label
+                model of third-party servers. It can also be configured for Introducing Brokers, Monye Managers, and
+                Entrepreneurs. The software is hosted on our servers and maintained by our team. There is also an option
+                to provide our existing strategies to your clients.
+              </p>
+            </div>
+
+            <div class="tabs__content" data-tab-content="Main Label">
+              <p class="tabs__text">
+                The solution is suitable for brokers using their own trading servers or working under the white-label
+                model of third-party servers. It can also be configured for Introducing Brokers, Monye Managers, and
+                Entrepreneurs. The software is hosted on our servers and maintained by our team. There is also an option
+                to provide our existing strategies to your clients.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
       <section class="overview section">

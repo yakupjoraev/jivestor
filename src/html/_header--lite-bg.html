@@ -11,7 +11,19 @@
         </div>
 
         <ul class="menu">
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>White Label</a></li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__item-link" onclick="event.preventDefault()">
+              White Label
+
+              <img src="./img/icons/CaretDown.svg" alt="arrow icon">
+            </a>
+
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Trade Copier Web Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Performance Monitoring Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">White Label</a> </li>
+            </ul>
+          </li>
           <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>For Entrepreneurs</a></li>
           <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Demo</a></li>
 

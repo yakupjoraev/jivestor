@@ -20,6 +20,19 @@
 .header--lite-bg {
   background-color: #f5f5f5;
 
+  &.header--white-bg {
+    background-color: var(--white);
+  }
+
+  .dropdown .menu__item-link img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(19%) saturate(13%) hue-rotate(257deg) brightness(89%) contrast(103%);
+
+    @media (max-width: $breakpoint992) {
+      filter: brightness(0) saturate(100%) invert(98%) sepia(95%) saturate(1%) hue-rotate(245deg) brightness(102%) contrast(101%);
+    }
+
+  }
+
   .menu__item-link {
     color: var(--gray);
 
@@ -286,4 +299,125 @@
     color: var(--white);
     opacity: 1;
   }
+}
+
+
+.menu__item {
+  position: relative;
+}
+
+.dropdown {
+
+  .menu__item-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &::before {
+      content: none;
+    }
+
+    img {
+      margin-top: -2px;
+      transition: 0.2s linear;
+    }
+
+    @media (max-width: $breakpoint992) {
+      justify-content: center;
+    }
+
+  }
+
+  @media (max-width: $breakpoint992) {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.dropdown.active {
+
+  .menu__sublist {
+    opacity: 1;
+    transform: translateY(0);
+    user-select: auto;
+    pointer-events: visible;
+
+    @media (max-width: $breakpoint992) {
+      display: flex;
+    }
+
+  }
+
+  .menu__item-link {
+    opacity: 1;
+
+    img {
+      transform: rotate(180deg);
+      filter: brightness(0) saturate(100%) invert(56%) sepia(99%) saturate(4362%) hue-rotate(129deg) brightness(99%) contrast(88%);
+
+      @media (max-width: $breakpoint992) {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(99%) saturate(4362%) hue-rotate(129deg) brightness(99%) contrast(88%);
+      }
+    }
+  }
+}
+
+.menu__item-link {}
+
+.menu__sublist {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  background: var(--white);
+
+  opacity: 0;
+  transform: translateY(10px);
+  user-select: none;
+  pointer-events: none;
+
+  @media (max-width: $breakpoint992) {
+    position: static;
+    flex: 1 1 100%;
+    background-color: transparent;
+    box-shadow: none;
+    row-gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    display: none;
+    animation: fade 0.3s linear;
+  }
+
+}
+
+.menu__subitem {}
+
+.menu__sublink {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--gray);
+  opacity: 0.7;
+
+  @media (hover:hover) {
+    &:hover {
+      color: var(--green);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $breakpoint992) {
+    font-size: 16px;
+    color: var(--white);
+    opacity: 0.5;
+    text-align: center;
+  }
+
 }

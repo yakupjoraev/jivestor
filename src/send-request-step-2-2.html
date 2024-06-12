@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 40%;"></div>
+              </div>
+
+              <h1 class="send__title">Do you have previous experience in a similar business?</h1>
+            </div>
+
+            <div class="send__content">
+              <ul class="send__radios send-greeds send-greeds-3">
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="experience" id="send-experience-1">
+
+                  <label class="send__radio-label" for="send-experience-1">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/experience-1.svg" alt="icon">
+
+                    <p class="send__radio-text">Yes, less than 3 years.</p>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="experience" id="send-experience-2">
+
+                  <label class="send__radio-label" for="send-experience-2">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/experience-2.svg" alt="icon">
+
+                    <p class="send__radio-text">Yes, over 3 year</p>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="experience" id="send-experience-3">
+
+                  <label class="send__radio-label" for="send-experience-3">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/experience-3.svg" alt="icon">
+
+                    <p class="send__radio-text">No previous experience.</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="send__footer">
+              <button type="submit" class="send__btn-outline">Back</button>
+              <button type="submit" class="send__btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

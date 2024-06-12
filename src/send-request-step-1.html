@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 20%;"></div>
+              </div>
+
+              <h1 class="send__title">How would you classify yourself?</h1>
+            </div>
+
+            <div class="send__content">
+              <ul class="send__radios send-greeds send-greeds-4">
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="classify" id="send-classify-1" checked>
+
+                  <label class="send__radio-label" for="send-classify-1">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/classify-1.svg" alt="icon">
+
+                    <p class="send__radio-text">Brokerage company</p>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="classify" id="send-classify-2">
+
+                  <label class="send__radio-label" for="send-classify-2">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/classify-2.svg" alt="icon">
+
+                    <p class="send__radio-text">Introducing broker</p>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="classify" id="send-classify-3">
+
+                  <label class="send__radio-label" for="send-classify-3">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/classify-3.svg" alt="icon">
+
+                    <p class="send__radio-text">Money manager</p>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="radio" name="classify" id="send-classify-4">
+
+                  <label class="send__radio-label" for="send-classify-4">
+                    <img class="send__radio-icon" width="80" height="80" src="./img/send/classify-4.svg" alt="icon">
+
+                    <p class="send__radio-text">Entrepreneur</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="send__footer">
+              <button type="submit" class="send__btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

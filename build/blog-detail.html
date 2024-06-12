@@ -25,18 +25,33 @@
         </div>
 
         <ul class="menu">
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>White Label</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>For Entrepreneurs</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Demo</a></li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__item-link" onclick="event.preventDefault()">
+              White Label
+
+              <img src="./img/icons/CaretDown.svg" alt="arrow icon">
+            </a>
+
+            <ul class="menu__sublist">
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Trade Copier Web Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">Performance Monitoring Platform</a> </li>
+              <li class="menu__subitem"><a class="menu__sublink" href="#">White Label</a> </li>
+            </ul>
+          </li>
+
+          <li class="menu__item"><a href="#" class="menu__item-link">For Entrepreneurs</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link">Demo</a></li>
 
           <li class="menu__item">
-            <a href="#" class="menu__item-link btn" data-scroll>
+            <a href="#" class="menu__item-link btn">
               Pricing request
               <img class="menu__item-icon" width="16" height="16" src="./img/icons/white-arrow-right.svg"
                 alt="arrow icon">
             </a>
           </li>
-          <li class="menu__item"><a href="#" class="menu__item-link btn-outline" data-scroll>Contact Us</a></li>
+
+          <li class="menu__item"><a href="#" class="menu__item-link btn-outline">Contact Us</a></li>
+
         </ul>
         <div class="burger">
           <span></span>

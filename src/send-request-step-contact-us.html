@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 100%;"></div>
+              </div>
+
+              <h1 class="send__title">Contact Us</h1>
+            </div>
+
+            <div class="send__content">
+              <ul class="send__rows send-greeds send-greeds-2">
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Company name</label>
+                  <input class="send__row-input" type="text" placeholder="My company Ltd">
+                </li>
+
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Company webside</label>
+                  <input class="send__row-input" type="text" placeholder="www.mycompany.com">
+                </li>
+
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Contact name<span>*</span></label>
+                  <input class="send__row-input" type="text" placeholder="John Smith">
+                </li>
+
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Contact E-mail<span>*</span></label>
+                  <input class="send__row-input" type="email" placeholder="john@smith.com">
+                </li>
+
+                <li class="send__row send__row--end send-greed ">
+                  <label class="send__row-label" for="">Phone<span>*</span></label>
+                  <input class="send__row-input" type="tel" placeholder="Your phone number">
+                </li>
+
+                <!-- <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Messenger<span>*</span></label>
+                  <input class="send__row-input" type="text" placeholder="Enter your skype id">
+                </li> -->
+
+                <li class="send__row send-greed">
+                  <div class="contacts__form-head">
+                    <label class="contacts__form-label" for="">Messenger<span>*</span></label>
+
+                    <div class="contacts__form-socials">
+                      <div>
+                        <input class="contacts__form-checkbox" name="messenger" type="radio" id="checkbox-1">
+                        <label class="contacts__form-checkbox-label" for="checkbox-1">Telegram</label>
+                      </div>
+                      <div>
+                        <input class="contacts__form-checkbox" name="messenger" type="radio" id="checkbox-2" checked>
+                        <label class="contacts__form-checkbox-label" for="checkbox-2">Skype</label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="contacts__form-inputs">
+                    <input class="contacts__form-input contacts__form-input--checkbox" type="text"
+                      placeholder="Enter your telegram" id="checkbox-1-input">
+                    <input class="contacts__form-input contacts__form-input--checkbox active" type="text"
+                      placeholder="Enter your skype id" id="checkbox-2-input">
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="send__footer">
+              <button type="submit" class="send__btn-outline">Back</button>
+              <button type="submit" class="send__btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

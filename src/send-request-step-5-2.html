@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <div class="wrapper">
+    <!-- Header -->
+    @@include('./html/_header--white-bg.html')
+
+    <!-- Main Page -->
+    <main>
+      <form action="#" class="send section">
+        <div class="container">
+          <div class="send__inner">
+            <div class="send__head">
+              <div class="send__line">
+                <div class="send__line-inner" style="width: 60%;"></div>
+              </div>
+
+              <h1 class="send__title">What are your primary targeted regions?</h1>
+            </div>
+
+            <div class="send__content">
+              <ul class="send__radios send-greeds send-greeds-3">
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-1" checked>
+
+                  <label class="send__radio-label" for="send-regions-1">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-1.svg" alt="icon">
+
+                    <p class="send__radio-text">Europe</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-2">
+
+                  <label class="send__radio-label" for="send-regions-2">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-2.svg" alt="icon">
+
+                    <p class="send__radio-text">Asia-Pacific</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-3">
+
+                  <label class="send__radio-label" for="send-regions-3">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-3.svg" alt="icon">
+
+                    <p class="send__radio-text">Africa</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-4">
+
+                  <label class="send__radio-label" for="send-regions-4">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-4.svg" alt="icon">
+
+                    <p class="send__radio-text">North-America</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-5">
+
+                  <label class="send__radio-label" for="send-regions-5">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-5.svg" alt="icon">
+
+                    <p class="send__radio-text">Central America & Carribean</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+
+                <li class="send__radio send-greed">
+                  <input class="send__radio-input" type="checkbox" name="regions" id="send-regions-6">
+
+                  <label class="send__radio-label" for="send-regions-6">
+                    <img class="send__radio-icon send__radio-icon--large" width="244" height="120"
+                      src="./img/send/regions-6.svg" alt="icon">
+
+                    <p class="send__radio-text">South America</p>
+
+                    <div class="send__check"></div>
+                  </label>
+                </li>
+              </ul>
+
+
+
+              <ul class="send__rows send__rows--mini send-greeds">
+                <li class="send__row send-greed">
+                  <label class="send__row-label" for="">Please specify the main country:</label>
+                  <input class="send__row-input" type="text" placeholder="Enter one or several countries">
+                </li>
+              </ul>
+            </div>
+
+            <div class="send__footer">
+              <button type="submit" class="send__btn-outline">Back</button>
+              <button type="submit" class="send__btn">Next</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </div>
+
+</body>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>
