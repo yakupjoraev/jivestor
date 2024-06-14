@@ -79,7 +79,7 @@
   // .tabs__contents
 
   &__contents {
-    padding: 30px;
+    padding: 18px 30px;
     border-bottom: 1px solid #ececec;
     border-right: 1px solid #ececec;
     border-top: 1px solid #ececec;
@@ -116,6 +116,10 @@
     line-height: 120%;
     color: var(--gray);
     opacity: 0.9;
+
+    @media (max-width: $breakpoint768) {
+      line-height: 140%;
+    }
   }
 
   // .tabs__accent-text
@@ -126,5 +130,9 @@
     line-height: 120%;
     color: var(--gray);
     opacity: 0.9;
+
+    @media (max-width: $breakpoint768) {
+      line-height: 140%;
+    }
   }
 }

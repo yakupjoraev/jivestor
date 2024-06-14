@@ -36,7 +36,7 @@
   cursor: pointer;
 
   @media (max-width: $breakpoint768) {
-    column-gap: 16px;
+    column-gap: 4px;
   }
 }
 
@@ -44,6 +44,10 @@
   font-weight: 500;
   font-size: 24px;
   color: var(--black);
+
+  @media (max-width: $breakpoint768) {
+    font-size: 18px;
+  }
 }
 
 .accordion__header-line {
@@ -74,4 +78,8 @@
   font-size: 14px;
   line-height: 120%;
   color: var(--gray);
+
+  @media (max-width: $breakpoint768) {
+    line-height: 140%;
+  }
 }

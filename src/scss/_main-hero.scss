@@ -1,6 +1,11 @@
 .main-hero {
   background-color: var(--gray);
 
+  @media (max-width: $breakpoint768) {
+    padding-top: 15px;
+  }
+
+
   // .main-hero__inner
 
   &__inner {

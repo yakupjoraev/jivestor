@@ -10,6 +10,10 @@
 
   @media (max-width: $breakpoint768) {
     padding: 30px 0 0;
+
+    .contacts__form-checkbox-label {
+      padding: 6px 30px;
+    }
   }
 
 
@@ -115,6 +119,7 @@
   &__info-accent {
     font-weight: 500;
     font-size: 20px;
+    line-height: 120%;
     color: var(--white);
     transition: color 0.2s linear;
   }
@@ -341,6 +346,8 @@
     font-weight: 600;
     font-size: 14px;
     color: var(--black);
+
+
   }
 
   // .contacts__form-input--checkbox

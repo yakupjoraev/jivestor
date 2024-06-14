@@ -90,6 +90,10 @@
     color: var(--white);
   }
 
+  @media (max-width: $breakpoint768) {
+    font-size: 14px;
+  }
+
 }
 
 .section-subtitle--green {

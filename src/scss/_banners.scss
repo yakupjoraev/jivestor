@@ -1,0 +1,50 @@
+.banner {
+  position: relative;
+  padding: 25px 16px;
+
+  // .banner__close
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+
+  // .banner__text
+
+  &__text {
+    max-width: 728px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--gray);
+    opacity: 0.6;
+
+    a {
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--black);
+    }
+  }
+}
+
+.banner--yellow {
+  background-color: #FFC837;
+}
+
+.banner--orange {
+  background-color: #E05534;
+
+  .banner__text {
+    color: var(--white);
+
+    a {
+      color: var(--white);
+    }
+  }
+}

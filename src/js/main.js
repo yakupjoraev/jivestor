@@ -262,6 +262,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const closeButtons = document.querySelectorAll('.banner__close');
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+
+      const banner = this.closest('.banner');
+      if (banner) {
+        banner.style.display = 'none';
+      }
+    });
+  });
+});
+
+
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон
