@@ -175,7 +175,11 @@
 
   // .slider__slide-content
 
-  &__slide-content {}
+  &__slide-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
 
   // .slider__slide-pic
 
